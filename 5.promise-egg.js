@@ -10,14 +10,15 @@ function getChicken() {
 }
 
 getChicken()
-.catch(error =>  {
-    console.log(error.name);
-    return '🐔';
-})
+// .catch(error =>  {
+//     console.log(error.name);
+//     return '🐔';
+// })
 // .then(chicken => fetchEgg(chicken))
 // .then(egg => fryEgg(egg))
 // .then(friedEgg => console.log(friedEgg))
 // 아래와 같이 축약하여 가독성 높임
-.then(fetchEgg(chicken))
-.then(fryEgg(egg))
+.catch(error => '🐔')
+.then(fetchEgg)
+.then(fryEgg)
 .then(console.log);
